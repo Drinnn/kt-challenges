@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ChallengesModule } from './challenges/challenges.module';
+import { MatchesModule } from './matches/matches.module';
 
 @Module({
   imports: [
@@ -10,6 +11,7 @@ import { ChallengesModule } from './challenges/challenges.module';
       isGlobal: true,
     }),
     ChallengesModule,
+    MatchesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
